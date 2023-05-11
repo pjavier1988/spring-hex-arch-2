@@ -11,4 +11,6 @@ public interface ICarService {
     List<Car> findAllCars();
 
     Car findCarById(Long id);
+
+    String carExists(Long id);
 }

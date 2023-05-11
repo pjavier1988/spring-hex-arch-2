@@ -27,4 +27,13 @@ public class CarService implements ICarService{
     public Car findCarById(Long id) {
         return iCarDAO.findById(id);
     }
+
+    @Override
+    public String carExists(Long id) {
+        Car car = iCarDAO.findById(id);
+        if(car != null){
+            return "Encontre carro con id "+id;
+        }
+        return "No encontre un carro";
+    }
 }
